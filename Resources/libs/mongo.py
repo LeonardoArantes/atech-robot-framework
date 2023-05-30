@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3.8
 from pymongo import MongoClient
 
-client = MongoClient('mongodb+srv://LeonardoArantes:LeonardoArantes@cluster0.avtr6sg.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient('mongodb+srv://LeonardoArantes:xperience@cluster0.avtr6sg.mongodb.net/?retryWrites=true&w=majority')
 
 db = client['markdb']
 

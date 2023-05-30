@@ -21,9 +21,9 @@ Duplicated User
     [Tags]    Duplicated
 
     &{user}        Create Dictionary     
-    ...    name=Vo Werine    
-    ...    email=Vo.Werine@hotmail.com    
-    ...    password=pwd123
+    ...            name=Vo Werine    
+    ...            email=Vo.Werine@hotmail.com    
+    ...            password=pwd123
 
     Remove User By Email            ${user}[email]
 
@@ -37,9 +37,9 @@ Nome deve ser obrigatorio
     [Tags]    Missing name
  
      &{user}        Create Dictionary     
-    ...    name=
-    ...    email=Vo.Werine@hotmail.com
-    ...    password=pwd123
+    ...             name=
+    ...             email=Vo.Werine@hotmail.com
+    ...             password=pwd123
    
     Start Session
     Go To signup
@@ -51,9 +51,9 @@ Email deve ser obrigatorio
      [Tags]    Missing email
  
      &{user}        Create Dictionary     
-    ...    name=Vo Werine
-    ...    email= 
-    ...    password=pwd123
+    ...             name=Vo Werine
+    ...             email= 
+    ...             password=pwd123
 
     Start Session
     Go To signup
@@ -64,9 +64,9 @@ Senha deve ser obrigatorio
     [Tags]    Missing Password
  
      &{user}        Create Dictionary     
-    ...    name=Vo Werine 
-    ...    email=Vo.Werine@hotmail.com    
-    ...    password=
+    ...             name=Vo Werine 
+    ...             email=Vo.Werine@hotmail.com    
+    ...             password=
 
     Start Session
     Go To signup
