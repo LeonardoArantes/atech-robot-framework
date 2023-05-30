@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation    
 
-Library          Browser
-Library          libs/mongo.py
+Library             Browser
+Library             libs/mongo.py
 
-Resource        pages/signup.robot
+Resource            pages/signup.robot
 
 *** Keywords ***
 Start Session
