@@ -10,7 +10,7 @@ Go to signup
     Get Text                 css=form h1    equal     Faça seu cadastro
 
 Register user
-    [Arguments]    ${user}
+    [Arguments]              ${user}
 
         Fill Text            css=input[name=name]         ${user}[name]
         Fill Text            css=input[name=email]        ${user}[email]
@@ -23,5 +23,13 @@ Notice should be
     
     ${notice}                Set Variable       css=.notice p
 
-    Wait For Elements State  ${notice}          visible 5
+    Wait For Elements State  ${notice}          visible      5
+    Get text                 ${notice}          equal        ${message}
+
+Required fields contain
+    [Arguments]              ${message}
+    
+    ${notice}                Set Variable       css=.alert
+
+    Wait For Elements State  ${notice}          visible      5
     Get text                 ${notice}          equal        ${message}

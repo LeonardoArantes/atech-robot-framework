@@ -1,5 +1,4 @@
-#!/usr/local/bin/python3.9
-# -*- coding: utf-8 -*-
+#!/usr/local/bin/python3.8
 from pymongo import MongoClient
 
 client = MongoClient('mongodb+srv://LeonardoArantes:LeonardoArantes@cluster0.avtr6sg.mongodb.net/?retryWrites=true&w=majority')
