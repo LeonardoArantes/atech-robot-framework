@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.6 on linux)" generated="20230530 03:13:49.444" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro" source="/home/platao/LEO_WORKSPACE/QAx/projects/mark85-robot/Tests/cadastro.robot">
+<test id="s1-t1" name="Teste Cadastro" line="6">
+<kw name="New Browser" library="Browser">
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230530 03:13:50.151" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/platao/LEO_WORKSPACE/QAx/projects/mark85-robot/Tests/browser/traces/0bfd7141-d3fb-476b-a0fe-dac5847a49b1"}</msg>
+<msg timestamp="20230530 03:13:50.469" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/platao/LEO_WORKSPACE/QAx/projects/mark85-robot/Tests/browser/traces/0bfd7141-d3fb-476b-a0fe-dac5847a49b1"}</msg>
+<status status="PASS" starttime="20230530 03:13:50.149" endtime="20230530 03:13:50.470"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>http://localhost:3000/signup</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230530 03:13:51.145" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/signup</msg>
+<msg timestamp="20230530 03:13:51.145" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230530 03:13:50.470" endtime="20230530 03:13:51.146"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=form h1</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230530 03:13:51.226" level="INFO">Text: 'Faça seu cadastro'</msg>
+<status status="PASS" starttime="20230530 03:13:51.146" endtime="20230530 03:13:51.226"/>
+</kw>
+<kw name="Create Dictionary name=leonardo arantes">
+<var>&amp;{user}</var>
+<arg>email=leonardo@hotmail.com</arg>
+<arg>password=pwd123</arg>
+<msg timestamp="20230530 03:13:51.229" level="FAIL">No keyword with name 'Create Dictionary name=leonardo arantes' found. Did you try using keyword 'BuiltIn.Create Dictionary' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20230530 03:13:51.229" endtime="20230530 03:13:51.229"/>
+</kw>
+<kw name="Register user">
+<arg>${user}</arg>
+<status status="NOT RUN" starttime="20230530 03:13:51.229" endtime="20230530 03:13:51.230"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${notice}</var>
+<arg>css=.notice p</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230530 03:13:51.230" endtime="20230530 03:13:51.230"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${message}</var>
+<arg>Boas vindas ao Mark85, o seu gerenciador de tarefas.</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230530 03:13:51.230" endtime="20230530 03:13:51.230"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${notice}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20230530 03:13:51.230" endtime="20230530 03:13:51.230"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${notice}</arg>
+<arg>equal</arg>
+<arg>${message}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230530 03:13:51.230" endtime="20230530 03:13:51.231"/>
+</kw>
+<status status="FAIL" starttime="20230530 03:13:50.145" endtime="20230530 03:13:51.231">No keyword with name 'Create Dictionary name=leonardo arantes' found. Did you try using keyword 'BuiltIn.Create Dictionary' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<test id="s1-t2" name="Duplicated User" line="25">
+<tag>Duplicated</tag>
+<status status="FAIL" starttime="20230530 03:13:51.317" endtime="20230530 03:13:51.320">Test contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20230530 03:13:49.445" endtime="20230530 03:13:51.325"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Duplicated</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

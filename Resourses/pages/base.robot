@@ -1,0 +1,1 @@
+//falta resolver o problema da biblioteca browser e falta resolver o problema ddo git, nao ta dando push

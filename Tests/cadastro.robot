@@ -1,7 +1,6 @@
 *** Settings *** 
 
 Library        Browser
-Library        Resources/libs/mongo.py    
 
 *** Test Cases ***
 Teste Cadastro
